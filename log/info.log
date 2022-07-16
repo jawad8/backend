@@ -1,0 +1,150 @@
+INFO 2022-07-16 15:26:19,298 autoreload 9120 1760 Watching for file changes with StatReloader
+INFO 2022-07-16 15:26:44,308 autoreload 9120 1760 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:26:48,625 autoreload 328 13196 Watching for file changes with StatReloader
+INFO 2022-07-16 15:27:01,137 autoreload 328 13196 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:27:08,874 autoreload 20048 1164 Watching for file changes with StatReloader
+INFO 2022-07-16 15:28:08,103 autoreload 20048 1164 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:28:12,651 autoreload 19220 19940 Watching for file changes with StatReloader
+INFO 2022-07-16 15:28:27,724 autoreload 19220 19940 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:28:31,573 autoreload 19600 20096 Watching for file changes with StatReloader
+INFO 2022-07-16 15:28:49,784 autoreload 19600 20096 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:28:53,850 autoreload 19500 16900 Watching for file changes with StatReloader
+INFO 2022-07-16 15:29:23,448 autoreload 19500 16900 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:29:27,310 autoreload 9360 9576 Watching for file changes with StatReloader
+INFO 2022-07-16 15:30:05,855 autoreload 18260 14324 Watching for file changes with StatReloader
+INFO 2022-07-16 15:38:54,411 autoreload 21348 18488 Watching for file changes with StatReloader
+INFO 2022-07-16 15:39:58,091 autoreload 20724 20620 Watching for file changes with StatReloader
+INFO 2022-07-16 15:40:06,509 autoreload 18896 21128 Watching for file changes with StatReloader
+INFO 2022-07-16 15:40:40,240 autoreload 20728 20564 Watching for file changes with StatReloader
+INFO 2022-07-16 15:47:40,899 autoreload 13984 10256 Watching for file changes with StatReloader
+WARNING 2022-07-16 15:48:09,416 log 13984 3988 Not Found: /warning/
+WARNING 2022-07-16 15:48:09,417 basehttp 13984 3988 "GET /warning/ HTTP/1.1" 404 2102
+INFO 2022-07-16 15:49:26,729 autoreload 13984 10256 E:\log_management\backend\backend\urls.py changed, reloading.
+INFO 2022-07-16 15:49:28,888 autoreload 2116 8140 Watching for file changes with StatReloader
+INFO 2022-07-16 15:49:53,740 autoreload 2116 8140 E:\log_management\backend\backend\urls.py changed, reloading.
+INFO 2022-07-16 15:49:55,853 autoreload 6192 8052 Watching for file changes with StatReloader
+INFO 2022-07-16 15:50:00,851 autoreload 6192 8052 E:\log_management\backend\backend\urls.py changed, reloading.
+INFO 2022-07-16 15:50:03,020 autoreload 18816 18700 Watching for file changes with StatReloader
+INFO 2022-07-16 15:50:20,153 autoreload 19744 19080 Watching for file changes with StatReloader
+WARNING 2022-07-16 15:50:24,264 log 19744 18636 Not Found: /warning/
+WARNING 2022-07-16 15:50:24,265 basehttp 19744 18636 "GET /warning/ HTTP/1.1" 404 2207
+WARNING 2022-07-16 15:50:24,309 log 19744 18636 Not Found: /favicon.ico
+WARNING 2022-07-16 15:50:24,310 basehttp 19744 18636 "GET /favicon.ico HTTP/1.1" 404 2216
+ERROR 2022-07-16 15:50:32,153 log 19744 18636 Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: waaaaarning() takes 0 positional arguments but 1 was given
+ERROR 2022-07-16 15:50:32,157 basehttp 19744 18636 "GET /logs/warning/ HTTP/1.1" 500 92095
+INFO 2022-07-16 15:51:01,034 autoreload 19744 19080 E:\log_management\backend\logs\views.py changed, reloading.
+INFO 2022-07-16 15:51:03,415 autoreload 20952 15668 Watching for file changes with StatReloader
+INFO 2022-07-16 15:51:05,972 views 20952 19876 this is info log
+WARNING 2022-07-16 15:51:05,972 views 20952 19876 this is warning log
+CRITICAL 2022-07-16 15:51:05,973 views 20952 19876 this is critical log
+CRITICAL 2022-07-16 15:51:05,973 views 20952 19876 this is critical log
+ERROR 2022-07-16 15:51:05,973 views 20952 19876 this is error log
+ERROR 2022-07-16 15:51:06,054 log 20952 19876 Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-07-16 15:51:06,056 basehttp 20952 19876 "GET /logs/warning/ HTTP/1.1" 500 79432
+INFO 2022-07-16 15:53:09,762 autoreload 20952 15668 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:53:11,591 autoreload 14812 15412 Watching for file changes with StatReloader
+INFO 2022-07-16 15:53:27,063 views 14812 8596 this is info log
+WARNING 2022-07-16 15:53:27,063 views 14812 8596 this is warning log
+CRITICAL 2022-07-16 15:53:27,064 views 14812 8596 this is critical log
+ERROR 2022-07-16 15:53:27,065 views 14812 8596 this is error log
+ERROR 2022-07-16 15:53:27,136 log 14812 8596 Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-07-16 15:53:27,140 basehttp 14812 8596 "GET /logs/warning/ HTTP/1.1" 500 79435
+INFO 2022-07-16 15:57:53,716 autoreload 14812 15412 E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:57:55,427 autoreload Watching for file changes with StatReloader
+INFO 2022-07-16 15:57:59,879 autoreload E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 15:58:14,058 autoreload Watching for file changes with StatReloader
+INFO 2022-07-16 15:58:27,290 views this is info log
+WARNING 2022-07-16 15:58:27,290 views this is warning log
+CRITICAL 2022-07-16 15:58:27,291 views this is critical log
+ERROR 2022-07-16 15:58:27,291 views this is error log
+ERROR 2022-07-16 15:58:27,375 log Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-07-16 15:58:27,378 basehttp "GET /logs/warning/ HTTP/1.1" 500 79362
+INFO 2022-07-16 16:19:04,755 views this is info log
+WARNING 2022-07-16 16:19:04,755 views this is warning log
+CRITICAL 2022-07-16 16:19:04,756 views this is critical log
+ERROR 2022-07-16 16:19:04,756 views this is error log
+ERROR 2022-07-16 16:19:04,803 log Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-07-16 16:19:04,804 basehttp "GET /logs/warning/ HTTP/1.1" 500 79362
+INFO 2022-07-16 17:29:01,198 autoreload E:\log_management\backend\logs\views.py changed, reloading.
+INFO 2022-07-16 17:29:06,364 autoreload Watching for file changes with StatReloader
+INFO 2022-07-16 17:29:47,854 autoreload E:\log_management\backend\backend\settings.py changed, reloading.
+INFO 2022-07-16 17:53:24,407 views this is info log
+WARNING 2022-07-16 17:53:24,408 views this is warning log
+CRITICAL 2022-07-16 17:53:24,408 views this is critical log
+ERROR 2022-07-16 17:53:24,408 views this is error log

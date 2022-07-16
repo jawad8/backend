@@ -2,4 +2,8 @@ from django.contrib import admin
 from . models import LogTable
 # Register your models here.
 
-admin.site.register(LogTable)
+
+class logTableadmin(admin.ModelAdmin):
+    readonly_fields = ('log_time',)
+
+admin.site.register(LogTable, logTableadmin)

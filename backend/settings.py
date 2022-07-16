@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -125,4 +125,81 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.customUser'
+
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file1': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename':'./log/debug.log',
+#             'formatter':'simple',
+#         },
+#         'file2':{
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'filename':'./log/info.log',
+#             'formatter':'simple',
+#         },
+#         'file3': {
+#             'level': 'WARNING',
+#             'class': 'logging.FileHandler',
+#             'filename':'./log/warn.log',
+#             'formatter':'simple',
+#         },
+#         'file4':{
+#             'level': 'CRITICAL',
+#             'class': 'logging.FileHandler',
+#             'filename':'./log/critical.log',
+#             'formatter':'simple',
+#         },
+#         'file5': {
+#             'level': 'ERROR',
+#             'class': 'logging.FileHandler',
+#             'filename':'./log/error.log',
+#             'formatter':'simple',
+#         },
+#     },
+#     'loggers': {
+#         'db': {
+#             'class': ['logs.log_handler.DatabaseLogHandler'],
+#             'level': 'DEBUG',
+#         },
+#     },
+#     'formatters':{
+#         'simple': {
+#             'format': '{levelname} {asctime} {module} {message}',
+#             'style': '{',
+#         }
+#     }
+# }
+DJANGO_DB_LOGGER_ENABLE_FORMATTER = True
+DJANGO_DB_LOGGER_ADMIN_LIST_PER_PAGE = 30   
+LOGGING = {
+    'version': 1,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(asctime)s %(message)s'
+        },
+    },
+    'handlers': {
+        'db_handler': {
+            'level':'DEBUG',
+            'class':'logs.log_handler.DatabaseLogHandler',
+            'formatter': 'verbose',
+        }
+    },
+    'loggers': {
+        'db': {
+            'handlers': ['db_handler'],
+            'level': 'DEBUG',
+        }
+    }
+}
+

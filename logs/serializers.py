@@ -7,4 +7,4 @@ import json
 class GetLogsSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.LogTable
-        fields = '__all__'
+        fields = ['log_type', 'log_error_Message']

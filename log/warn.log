@@ -1,0 +1,60 @@
+WARNING 2022-07-16 15:53:27,063 views 14812 8596 this is warning log
+CRITICAL 2022-07-16 15:53:27,064 views 14812 8596 this is critical log
+ERROR 2022-07-16 15:53:27,065 views 14812 8596 this is error log
+ERROR 2022-07-16 15:53:27,136 log 14812 8596 Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-07-16 15:53:27,140 basehttp 14812 8596 "GET /logs/warning/ HTTP/1.1" 500 79435
+WARNING 2022-07-16 15:58:27,290 views this is warning log
+CRITICAL 2022-07-16 15:58:27,291 views this is critical log
+ERROR 2022-07-16 15:58:27,291 views this is error log
+ERROR 2022-07-16 15:58:27,375 log Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-07-16 15:58:27,378 basehttp "GET /logs/warning/ HTTP/1.1" 500 79362
+WARNING 2022-07-16 16:19:04,755 views this is warning log
+CRITICAL 2022-07-16 16:19:04,756 views this is critical log
+ERROR 2022-07-16 16:19:04,756 views this is error log
+ERROR 2022-07-16 16:19:04,803 log Internal Server Error: /logs/warning/
+Traceback (most recent call last):
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\log_management\logs_django\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\log_management\logs_django\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-07-16 16:19:04,804 basehttp "GET /logs/warning/ HTTP/1.1" 500 79362
+WARNING 2022-07-16 17:53:24,408 views this is warning log
+CRITICAL 2022-07-16 17:53:24,408 views this is critical log
+ERROR 2022-07-16 17:53:24,408 views this is error log

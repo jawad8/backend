@@ -5,6 +5,7 @@ from . import models
 import json
 
 class GetLogsSerializer(serializers.ModelSerializer):
+    # log_type = 
     class Meta:
         model = models.LogTable
-        fields = ['log_type', 'log_error_Message']
+        fields = '__all__'

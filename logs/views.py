@@ -3,7 +3,6 @@ from distutils.log import Log
 from trace import Trace
 from django.shortcuts import render
 from . import models, serializers
-from users import models as userModels
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import logging

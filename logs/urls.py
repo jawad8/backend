@@ -1,7 +1,9 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 
 
 urlpatterns = [
-    path('warning/', views.getLogs),
+    path('createlog/', views.getLogs),
+    path('fetchLogs/', views.fetchLogs),
+
 ]

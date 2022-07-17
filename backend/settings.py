@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!b6)b=ya-g4qmwu7von)wqza@_mk+676(cf1d((w3%-d%eut6x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*','127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -126,56 +126,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.customUser'
-
-
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'file1': {
-#             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
-#             'filename':'./log/debug.log',
-#             'formatter':'simple',
-#         },
-#         'file2':{
-#             'level': 'INFO',
-#             'class': 'logging.FileHandler',
-#             'filename':'./log/info.log',
-#             'formatter':'simple',
-#         },
-#         'file3': {
-#             'level': 'WARNING',
-#             'class': 'logging.FileHandler',
-#             'filename':'./log/warn.log',
-#             'formatter':'simple',
-#         },
-#         'file4':{
-#             'level': 'CRITICAL',
-#             'class': 'logging.FileHandler',
-#             'filename':'./log/critical.log',
-#             'formatter':'simple',
-#         },
-#         'file5': {
-#             'level': 'ERROR',
-#             'class': 'logging.FileHandler',
-#             'filename':'./log/error.log',
-#             'formatter':'simple',
-#         },
-#     },
-#     'loggers': {
-#         'db': {
-#             'class': ['logs.log_handler.DatabaseLogHandler'],
-#             'level': 'DEBUG',
-#         },
-#     },
-#     'formatters':{
-#         'simple': {
-#             'format': '{levelname} {asctime} {module} {message}',
-#             'style': '{',
-#         }
-#     }
-# }
 DJANGO_DB_LOGGER_ENABLE_FORMATTER = True
 DJANGO_DB_LOGGER_ADMIN_LIST_PER_PAGE = 30   
 LOGGING = {

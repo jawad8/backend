@@ -3,21 +3,17 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from . import models, serializers
 
-from logs import models
-
 # Create your views here.
 # create user API
 @api_view(['POST'])
 def createUser(request):
     try:
-        reqData = {
-            "Username":test,
-            "password":jquury123,
-            "user_type":"user"
-        }
         reqData = request.data
-        user_obj = models.customUser()
-    
+        print(reqData)
+        user_obj = models.customUser(username=reqData['Username'],password=reqData['password'], user_type=reqData['user_type'])
+        print(user_obj)
+        user_obj.save()
+        return Response(True)
     except Exception as e:
         print(e)
-        return Response(False,status=400)
+        return Response(False)

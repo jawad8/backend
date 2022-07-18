@@ -28,3 +28,42 @@ def fetchLogs(request):
     except Exception as e:
         print(e)
         return Response(False, status=400)
+# filter api for logs
+@api_view(['POST'])
+def filterLogs(request):
+    try:
+        filteredList = []
+        reqData = request.data
+        if 'info' in reqData:
+            res_obj = models.LogTable.objects.filter(log_type=reqData['info'])
+            serializer_obj = serializers.GetLogsSerializer(res_obj,many=True)
+            print(serializer_obj)
+            filteredList.append(serializer_obj.data)
+        if 'error' in reqData:
+            res_obj = models.LogTable.objects.filter(log_type=reqData['error'])
+            serializer_obj = serializers.GetLogsSerializer(res_obj,many=True)
+            print(serializer_obj)
+            filteredList.append(serializer_obj.data)
+
+        if 'debug' in reqData:
+            res_obj = models.LogTable.objects.filter(log_type=reqData['debug'])
+            serializer_obj = serializers.GetLogsSerializer(res_obj,many=True)
+            print(serializer_obj)
+            filteredList.append(serializer_obj.data)
+
+        if 'critical' in reqData:
+            res_obj = models.LogTable.objects.filter(log_type=reqData['critical'])
+            serializer_obj = serializers.GetLogsSerializer(res_obj,many=True)
+            print(serializer_obj)     
+            filteredList.append(serializer_obj.data)
+
+        if 'warning' in reqData:
+            res_obj = models.LogTable.objects.filter(log_type=reqData['warning'])
+            serializer_obj = serializers.GetLogsSerializer(res_obj,many=True)
+            print(serializer_obj)     
+            filteredList.append(serializer_obj.data)
+
+    
+    except Exception as e:
+        print(e)
+        return Response()

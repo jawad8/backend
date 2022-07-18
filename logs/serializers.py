@@ -5,7 +5,11 @@ from . import models
 import json
 
 class GetLogsSerializer(serializers.ModelSerializer):
-    # log_type = 
+    log_type = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = models.LogTable
         fields = '__all__'
+        
+    def get_log_type(self,obj):
+        return obj.get_log_type_display()

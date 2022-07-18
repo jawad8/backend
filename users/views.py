@@ -5,15 +5,31 @@ from . import models, serializers
 
 # Create your views here.
 # create user API
+
+# api for user creation
 @api_view(['POST'])
 def createUser(request):
     try:
         reqData = request.data
-        print(reqData)
-        user_obj = models.customUser(username=reqData['Username'],password=reqData['password'], user_type=reqData['user_type'])
-        print(user_obj)
+        user_obj = models.customUser(
+            username=reqData['Username'], password=reqData['password'], user_type=reqData['user_type'])
         user_obj.save()
         return Response(True)
+    except Exception as e:
+        print(e)
+        return Response(False)
+
+#  api for user authentication
+@api_view(['POST'])
+def authUser(request):
+    try:
+        reqData = request.data
+        user_obj = models.customUser.objects.filter(username=reqData['Username'], password=reqData['password'])
+        print(user_obj)
+        if user_obj:    
+            return Response(True)
+        else:
+            return Response(False)
     except Exception as e:
         print(e)
         return Response(False)

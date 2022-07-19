@@ -25,7 +25,6 @@ def authUser(request):
     try:
         reqData = request.data
         user_obj = models.customUser.objects.filter(username=reqData['Username'], password=reqData['password'])
-        print(user_obj)
         if user_obj:    
             return Response(True)
         else:

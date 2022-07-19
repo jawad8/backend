@@ -47,7 +47,6 @@ def filterLogs(request):
     if 'info' in reqData:
         res_obj = models.LogTable.objects.filter(log_type=reqData['info'])
         serializer_obj = serializers.GetLogsSerializer(res_obj, many=True)
-        print(serializer_obj)
         filteredList.extend(serializer_obj.data)
     if 'error' in reqData:
         res_obj = models.LogTable.objects.filter(log_type=reqData['error'])
@@ -67,12 +66,12 @@ def filterLogs(request):
         filteredList.extend(serializer_obj.data)
     today = date.today()
     yesterday = today - timedelta(days = 1)
-    # from 12 - 6pm
+    # time filtering for todays logs
     if 'today' in reqData:
         res_obj = models.LogTable.objects.filter(log_time__gte= yesterday )
         serializer_obj = serializers.GetLogsSerializer(res_obj, many=True)
         filteredList.extend(serializer_obj.data)
-    # from 6 - 12am
+    # for yesterday's log
     if 'yesterday' in reqData:
         res_obj = models.LogTable.objects.filter(log_time__gte=(yesterday - timedelta(days = 1)),log_time__lte = yesterday)
         serializer_obj = serializers.GetLogsSerializer(res_obj, many=True)

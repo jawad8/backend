@@ -4,8 +4,6 @@ from rest_framework.response import Response
 from . import models, serializers
 
 # Create your views here.
-# create user API
-
 # api for user creation
 @api_view(['POST'])
 def createUser(request):

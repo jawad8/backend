@@ -7,7 +7,7 @@ class LogTable(models.Model):
                  ('10', 'debug'), ('50', 'critical'), ('30', 'warning'))
     log_type = models.CharField(max_length=100, choices=types_log)
     log_time = models.DateTimeField(auto_now_add=True)
-    log_error_Message = models.TextField(default='')
+    log_message = models.TextField(default='')
 
     def __str__(self):
-        return self.log_error_Message
+        return self.log_message

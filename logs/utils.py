@@ -1,10 +1,10 @@
-from . import models, serializers, views
+from . import models, serializers
 from datetime import date
 from datetime import timedelta
 from asyncio.log import logger
 from django.shortcuts import render
 
-
+# handles filtering mechanism for logs
 def filterHandler(val):
     today = date.today()
     yesterday = today - timedelta(days = 1)

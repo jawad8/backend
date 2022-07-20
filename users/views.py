@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from . import models, serializers
+from . import models
 
 # api for user creation
 
@@ -17,6 +17,8 @@ def createUser(request):
     except Exception as e:
         print(e)
         return Response(False)
+
+
 
 #  api for user authentication
 

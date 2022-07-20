@@ -9,7 +9,6 @@ class DatabaseLogHandler(logging.Handler):
         from .models import LogTable
         from . import serializers
         trace = None
-
         if record.exc_info:
             trace = db_default_formatter.formatException(record.exc_info)
 
@@ -17,7 +16,6 @@ class DatabaseLogHandler(logging.Handler):
             msg = self.format(record)
         else:
             msg = record.getMessage()
-
         kwargs = {
             'log_type': record.levelno,
             'log_error_Message': msg,

@@ -8,6 +8,7 @@ from django.shortcuts import render
 def filterHandler(val):
     today = date.today()
     yesterday = today - timedelta(days = 1)
+
     if val == 'today':
         res_obj = models.LogTable.objects.filter(log_time__gte= yesterday )
         serializer_obj = serializers.GetLogsSerializer(res_obj, many=True)

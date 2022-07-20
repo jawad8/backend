@@ -35,8 +35,12 @@ def fetchLogs(request):
 def filterLogs(request):
     filteredList = []
     reqData = request.data
-    for key,val in reqData:
-        filteredList.extend(utils.filterHandler(val))
-    return filteredList
+    if not reqData:
+        res_obj = models.LogTable.objects.all()
+        serializer_obj = serializers.GetLogsSerializer(res_obj, many=True)
+        return Response(serializer_obj.data)
+    for val in reqData:
+        filteredList.extend(utils.filterHandler(reqData[val]))
+    return Response(filteredList)
 
 

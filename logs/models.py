@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-# Create your models here.
 
 # Table for storing the logs
 class LogTable(models.Model):

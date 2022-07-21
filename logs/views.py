@@ -42,5 +42,3 @@ def filterLogs(request):
     for val in reqData:
         filteredList.extend(utils.filterHandler(reqData[val]))
     return Response(filteredList)
-
-
